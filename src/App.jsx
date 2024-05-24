@@ -39,11 +39,12 @@ export default function App() {
           My Feed
         </h1> 
         <Feedlist articles = {byteArticles} blogTitle={byte}/>
-        <Feedlist articles={cssTricks} blogTitle={css}/>
+        
+        {/* <Feedlist articles={cssTricks} blogTitle={css}/>
         <Feedlist articles={smashingMag} blogTitle={smashingmag} />
         <Feedlist articles={logRocket} blogTitle={logrocket}/>
         <Feedlist articles={codingHorror} blogTitle={codinghorror} />
-        <Feedlist articles={liveSec} blogTitle={livesec} />
+        <Feedlist articles={liveSec} blogTitle={livesec} /> */}
     </>
   )
 }
