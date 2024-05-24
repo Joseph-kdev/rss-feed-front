@@ -42,7 +42,7 @@ export const Feedlist = ({ articles, blogTitle }) => {
       actualUrl : url
     }
     try {
-      const response = await axios.post("https://blogs-rs-sfeed-back.vercel.app/api/summaries", selectedUrl)
+      const response = await axios.post("https://blogs-rs-sfeed-back.vercel.app/summaries", selectedUrl)
       const summary = await response.data
       dispatch({
         type: "summary",
