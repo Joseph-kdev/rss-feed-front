@@ -1,5 +1,7 @@
 import axios from "axios"
 
+// const baseURL = "https://blogs-rs-sfeed-back.vercel.app/"
+
 const baseURL = "https://blogs-rs-sfeed-back.vercel.app/"
 
 export const getArticles = async() => {

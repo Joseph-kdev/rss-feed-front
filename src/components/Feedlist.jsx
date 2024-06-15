@@ -3,25 +3,12 @@ import { Feed } from './Feed'
 import axios from 'axios'
 import Modal from "react-modal"
 import ReactMarkdown from "react-markdown"
+import { reducer } from '../config/reducer'
 
-const reducer = (state, action) => {
-  switch (action.type) {
-    case "show-all":
-      return {...state, showAll: !state.showAll}
-    case "open-modal":
-      return {...state, open: !state.open}
-    case "summary":
-      return {...state, blogSummary: action.payload }
-  
-    default:
-      throw new Error()
-  }
-}
 
 export const Feedlist = ({ articles, blogTitle }) => {
   const [state, dispatch] = useReducer(reducer, { showAll: false, open: false, blogSummary: "" })
 
-  const initialArticles = articles.slice(0, 5)
   const toggleShowAll = () => {
     dispatch({
       type: "show-all"
